@@ -1,20 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="app.nerdao.avalianerd.AvaliaActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
 
-        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical"
+            android:layout_margin="16dp">
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Avaliação" />
 
+                <TextView
+                    android:id="@+id/txtNota"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="260dp" />
+
+            </LinearLayout>
+
+            <RatingBar
+                android:id="@+id/rbAvaliacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:contextClickable="true"
+                android:numStars="5"
+                android:rating="0" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="17dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Comentario"/>
+
+            <EditText
+                android:id="@+id/comentario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="17dp" />
+
+            <LinearLayout
+                android:layout_width="335dp"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginBottom="20dp">
+                <Button
+                    android:id="@+id/toggleFoto"
+                    android:layout_width="164dp"
+                    android:layout_height="wrap_content"
+                    android:text="Add Foto" />
+
+                <Button
+                    android:id="@+id/toggleAmigo"
+                    android:layout_width="164dp"
+                    android:layout_height="wrap_content"
+                    android:text="Add Amigo" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Local >"/>
+
+            <EditText
+                android:id="@+id/local"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/avaliar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Avaliar"/>
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
